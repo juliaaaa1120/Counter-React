@@ -5,10 +5,12 @@ function Counter(props) {
 
     function increase() {
         setNumber(number + 1);
+        props.increase();
     }
 
     function decrease() {
         setNumber(number - 1);
+        props.decrease();
     }
 
     return (

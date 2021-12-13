@@ -7,13 +7,12 @@ function CounterSizeGenerator(props) {
         const sizeValue = parseInt(event.target.value);
         setSize(sizeValue);
         props.updateSize(sizeValue);
-
     }
 
     return (
         <div>
             <span>Size: </span>
-            <input value={size} type="number" onChange={handleChangeSize}></input>
+            <input value={size} type="number" min="0" onChange={handleChangeSize}></input>
         </div>
     );
 }

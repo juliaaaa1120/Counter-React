@@ -21,7 +21,7 @@ function CounterGroup(props) {
         <div>
             {
                 counterList.map((item, index) => (
-                    <Counter key={item + index} increaseSum={increaseSum} decreaseSum={decreaseSum}></Counter>
+                    <Counter key={item + index} increase={increaseSum} decrease={decreaseSum}></Counter>
                 ))
             }
         </div>

@@ -4,12 +4,12 @@ function CounterGroupSum(props) {
     const [sum, setSum] = useState(0);
 
     useEffect(() => {
-        setSum(props.sum)
+        setSum(props.sum);
     }, [props.sum]);
 
     return (
         <div>
-            Sum: {sum}
+            <span>Sum: {sum}</span>
         </div>
     );
 }
