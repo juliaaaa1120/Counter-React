@@ -7,6 +7,7 @@ function CounterSizeGenerator(props) {
         const sizeValue = parseInt(event.target.value);
         setSize(sizeValue);
         props.updateSize(sizeValue);
+
     }
 
     return (
