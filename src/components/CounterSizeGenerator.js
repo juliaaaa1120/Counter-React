@@ -1,18 +1,19 @@
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { UPDATE_SIZE, RESET_SUM } from "../constants/constants"
 
-function CounterSizeGenerator(props) {
-    const [size, setSize] = useState(0);
+function CounterSizeGenerator() {
+    const dispatch = useDispatch();
 
     function handleChangeSize(event) {
         const sizeValue = parseInt(event.target.value);
-        setSize(sizeValue);
-        props.updateSize(sizeValue);
+        dispatch({ type: UPDATE_SIZE, payload: sizeValue });
+        dispatch({ type: RESET_SUM });
     }
 
     return (
         <div>
             <span>Size: </span>
-            <input value={size} type="number" min="0" onChange={handleChangeSize}></input>
+            <input type="number" min="0" onChange={handleChangeSize}></input>
         </div>
     );
 }
